@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	<!-- <table>
+            <tr>
+            
+         <td width="30"><input type="checkbox" name="Physics" /></td>
+              <td width="200">Physics
+              <table style="display:none;">
+            <tr>
+              <td width="30"><input type="checkbox" name="Acoustics" /></td>
+              <td width="200">Acoustics</td>
+            </tr>
+
+            <tr>
+              <td width="30"><input type="checkbox" name="Cosmology" /></td>
+              <td width="200">Cosmology</td>
+            </tr>
+            <tr>
+              <td width="30"><input type="checkbox" name="Nuclear Physics" /></td>
+              <td width="200">Nuclear Physics</td>
+               </tr>
+
+    </table> -->
+
+ 
+                    
+
+
+
+ <a href="#!">clicke</a>
+    <p>Hello Rayees</p>
+
+
+</body>
+
+</html>
+<script type="text/javascript">
+	$('input[name="Physics"]').on('click', function() {
+    $('.physicsTable').slideToggle();
+})
+
+$('input[name="Chemistry"]').on('click', function() {
+    $('.cheTable').slideToggle();
+})
+
+
+$('input[name=Physics], input[name=Chemistry]').on('click', function(){
+  if($(this).is(':checked')){
+       $(this).parent().next().find('table').show();
+  }else{
+        $(this).parent().next().find('table').hide();
+    }
+ 
+});
+
+
+$("a").click(function(){
+  $("p").toggle();
+});
+</script>
